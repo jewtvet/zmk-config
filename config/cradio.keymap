@@ -20,7 +20,7 @@
 
     behaviors {
         ht: hold_tap {
-            label = "hold_tap";
+            label = "hold_tap_letters";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -28,6 +28,28 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+        };
+
+        td11: td11 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD11";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&tg1_ru_25>, <&kp>;
+        };
+
+        td8: td8 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD8";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&tg0_en_26>, <&kp>;
         };
 
         mmv {
@@ -59,19 +81,46 @@
         };
     };
 
+    macros {
+        tg1_ru_25: tg1_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(N9)>, <&macro_wait_time 50>, <&tog 1>;
+
+            label = "TG1_RU";
+        };
+
+        tg0_en_26: tg0_en_26 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(N8)>, <&macro_wait_time 50>, <&tog 1>;
+
+            label = "TG0_EN_26";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Eng {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R         &kp T         &kp Y      &kp U            &kp I      &kp O  &kp LS(MINUS)
+&kp Q  &kp W  &kp E  &kp R         &kp T         &kp Y      &kp U            &kp I      &kp O  &td11 0 LS(MINUS)
 &kp A  &kp S  &kp D  &kp F         &kp G         &kp H      &kp J            &kp K      &kp L  &kp P
 &kp Z  &kp X  &kp C  &kp V         &kp B         &kp N      &kp PERIOD       &kp COMMA  &kp M  &kp QUESTION
                      &lt 2 DELETE  &kp LSHIFT    &kp SPACE  &lt 3 BACKSPACE
             >;
         };
 
-        layer_1 {
+        Rus {
+            bindings = <
+&kp Q               &kp W  &kp E  &kp R         &kp T         &kp Y      &kp U            &kp I                   &kp O  &td8 0 SEMICOLON
+&ht LEFT_BRACKET A  &kp S  &kp D  &kp F         &kp G         &kp H      &kp J            &kp K                   &kp L  &ht RIGHT_BRACKET P
+&kp Z               &kp X  &kp C  &kp V         &kp B         &kp N      &ht LS(N7) M     &ht LS(NUMBER_6) COMMA  &kp M  &kp SQT
+                                  &lt 2 DELETE  &kp LSHIFT    &kp SPACE  &lt 3 BACKSPACE
+            >;
+        };
+
+        Num {
             bindings = <
 &bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &bootloader
 &none        &none  &none  &none  &none    &none  &none  &none  &none  &none
@@ -80,16 +129,7 @@
             >;
         };
 
-        layer_2 {
-            bindings = <
-&bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &bootloader
-&none        &none  &none  &none  &none    &none  &none  &none  &none  &none
-&none        &none  &none  &none  &none    &none  &none  &none  &none  &none
-                           &none  &none    &none  &none
-            >;
-        };
-
-        layer_3 {
+        Sym {
             bindings = <
 &bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &bootloader
 &none        &none  &none  &none  &none    &none  &none  &none  &none  &none
