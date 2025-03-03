@@ -52,6 +52,16 @@
             bindings = <&tg0_en_26>, <&kp>;
         };
 
+        sm: sticky_mod {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_MOD";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <5000>;
+            quick-release;
+            ignore-modifiers;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -122,10 +132,10 @@
 
         Num {
             bindings = <
-&bootloader  &none  &none  &none  &none    &none  &none  &none  &none  &bootloader
-&none        &none  &none  &none  &none    &none  &none  &none  &none  &none
-&none        &none  &none  &none  &none    &none  &none  &none  &none  &none
-                           &none  &none    &none  &none
+&none         &kp LS(NUMBER_5)  &kp SLASH     &kp LS(NUMBER_8)  &kp ESCAPE          &kp LA(SPACE)     &kp LA(LG(NUMBER_3))     &kp LA(LG(LC(NUMBER_3)))  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LG(NUMBER_5))
+&kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4      &kp N5              &kp NUMBER_6      &kp NUMBER_7             &kp NUMBER_8              &kp NUMBER_9              &kp NUMBER_0
+&sm LEFT_GUI  &kp X             &kp MINUS     &kp LS(EQUAL)     &kp LS(NUMBER_4)    &kp LS(NUMBER_6)  &ht LS(NUMBER_7) PERIOD  &ht LS(NUMBER_6) COMMA    &none                     &none
+                                              &trans            &kp LEFT_SHIFT      &kp SPACE         &kp BACKSPACE
             >;
         };
 
