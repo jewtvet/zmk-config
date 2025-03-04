@@ -140,10 +140,10 @@
 
         Num {
             bindings = <
-&kp LG(N8)    &kp LS(NUMBER_5)  &kp SLASH     &kp LS(NUMBER_8)  &kp ESCAPE        &kp LA(SPACE)  &kp LA(LG(NUMBER_3))     &kp LA(LG(LC(NUMBER_3)))  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LG(NUMBER_5))
-&kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4      &kp N5            &kp NUMBER_6   &kp NUMBER_7             &kp NUMBER_8              &kp NUMBER_9              &kp NUMBER_0
-&bootloader   &kp LS(NUMBER_4)  &kp MINUS     &kp LS(EQUAL)     &sm LEFT_GUI      &none          &ht LS(NUMBER_7) PERIOD  &ht LS(NUMBER_6) COMMA    &kp LA(H)                 &bootloader
-                                              &trans            &kp LEFT_SHIFT    &kp SPACE      &kp BACKSPACE
+&kp LG(N8)       &kp LS(NUMBER_5)  &kp SLASH        &kp LS(NUMBER_8)  &kp ESCAPE         &kp LA(SPACE)    &kp LA(LG(NUMBER_3))     &kp LA(LG(LC(NUMBER_3)))  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LG(NUMBER_5))
+&ht F1 NUMBER_1  &ht F2 NUMBER_2   &ht F3 NUMBER_3  &ht F4 NUMBER_4   &ht F5 NUMBER_5    &ht F6 NUMBER_6  &ht F7 NUMBER_7          &ht F8 NUMBER_8           &ht F9 NUMBER_9           &ht F10 NUMBER_0
+&kp F11          &kp LS(NUMBER_4)  &kp MINUS        &kp LS(EQUAL)     &sm LEFT_GUI       &none            &ht LS(NUMBER_7) PERIOD  &ht LS(NUMBER_6) COMMA    &kp LA(H)                 &kp F12
+                                                    &trans            &kp LEFT_SHIFT     &kp SPACE        &kp BACKSPACE
             >;
         };
 
@@ -158,10 +158,10 @@
 
         Nav {
             bindings = <
-&none        &none  &none  &none   &none     &none   &none  &none  &none  &none
-&none        &none  &none  &none   &kp N0    &kp N0  &none  &none  &none  &none
-&bootloader  &none  &none  &none   &none     &none   &none  &none  &none  &bootloader
-                           &tog 4  &none     &none   &none
+&bootloader    &none              &kp LG(NON_US_BACKSLASH)        &kp LG(TAB)              &kp PAGE_UP                &ht LG(RIGHT_BRACKET) LG(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &kp UP         &none      &bootloader
+&kp LG(Z)      &kp LG(X)          &kp LG(C)                       &kp LG(V)                &kp PAGE_DOWN              &kp LC(TAB)                             &kp LEFT               &kp DOWN       &kp RIGHT  &none
+&kp LC(LG(F))  &kp LC(LA(ENTER))  &ht LA(LC(RIGHT)) LC(LA(LEFT))  &ht LC(LA(U)) LC(LA(J))  &ht LC(LA(I)) LC(LA(K))    &none                                   &kp LC(LEFT)           &kp LC(RIGHT)  &none      &none
+                                                                  &tog 4                   &kp LEFT_SHIFT             &kp LEFT_GUI                            &kp LEFT_ALT
             >;
         };
     };
