@@ -83,7 +83,7 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12 13>;
-            layers = <0 1>;
+            layers = <0 1 4>;
         };
 
         enter {
@@ -131,9 +131,9 @@
 
         Rus {
             bindings = <
-&kp Q               &kp W  &kp E  &kp R         &kp T         &kp Y      &kp U            &kp I                   &kp O  &td8 0 SEMICOLON
-&ht LEFT_BRACKET A  &kp S  &kp D  &kp F         &kp G         &kp H      &kp J            &kp K                   &kp L  &ht RIGHT_BRACKET P
-&kp Z               &kp X  &kp C  &kp V         &kp B         &kp N      &ht LS(N7) M     &ht LS(NUMBER_6) COMMA  &kp M  &kp SQT
+&kp Q               &kp W  &kp E  &kp R         &kp T         &kp Y      &kp U            &kp I                   &kp O       &td8 0 SEMICOLON
+&ht LEFT_BRACKET A  &kp S  &kp D  &kp F         &kp G         &kp H      &kp J            &kp K                   &kp L       &ht RIGHT_BRACKET P
+&kp Z               &kp X  &kp C  &kp V         &kp B         &kp N      &ht LS(N7) M     &ht LS(NUMBER_6) COMMA  &kp PERIOD  &kp SQT
                                   &lt 2 DELETE  &kp LSHIFT    &kp SPACE  &lt 3 BACKSPACE
             >;
         };
@@ -158,9 +158,9 @@
 
         Nav {
             bindings = <
-&bootloader    &none              &kp LG(NON_US_BACKSLASH)        &kp LG(TAB)              &kp PAGE_UP                &ht LG(RIGHT_BRACKET) LG(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &kp UP         &none      &bootloader
+&bootloader    &none              &kp LG(BACKSLASH)               &kp LG(TAB)              &kp PAGE_UP                &ht LG(RIGHT_BRACKET) LG(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &kp UP         &none      &bootloader
 &kp LG(Z)      &kp LG(X)          &kp LG(C)                       &kp LG(V)                &kp PAGE_DOWN              &kp LC(TAB)                             &kp LEFT               &kp DOWN       &kp RIGHT  &none
-&kp LC(LG(F))  &kp LC(LA(ENTER))  &ht LA(LC(RIGHT)) LC(LA(LEFT))  &ht LC(LA(U)) LC(LA(J))  &ht LC(LA(I)) LC(LA(K))    &none                                   &kp LC(LEFT)           &kp LC(RIGHT)  &none      &none
+&kp LC(LG(F))  &kp LC(LA(ENTER))  &ht LA(LC(RIGHT)) LC(LA(LEFT))  &ht LC(LA(J)) LC(LA(U))  &ht LC(LA(K)) LC(LA(I))    &none                                   &kp LC(LEFT)           &kp LC(RIGHT)  &none      &none
                                                                   &tog 4                   &kp LEFT_SHIFT             &kp LEFT_GUI                            &kp LEFT_ALT
             >;
         };
