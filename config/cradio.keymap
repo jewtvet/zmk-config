@@ -4,7 +4,6 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -170,7 +169,7 @@
             bindings = <
 &bootloader    &none              &kp LG(GRAVE)                   &kp LG(TAB)              &kp PAGE_UP                &ht LG(RIGHT_BRACKET) LG(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &kp UP         &none                                      &bootloader
 &kp LG(Z)      &kp LG(X)          &kp LG(C)                       &kp LG(V)                &kp PAGE_DOWN              &kp LC(TAB)                             &kp LEFT               &kp DOWN       &kp RIGHT                                  &none
-&kp LC(LG(F))  &kp LC(LA(ENTER))  &ht LA(LC(RIGHT)) LC(LA(LEFT))  &ht LC(LA(J)) LC(LA(U))  &ht LC(LA(K)) LC(LA(I))    &mkp LCLK                               &kp LC(LEFT)           &kp LC(RIGHT)  &ht LG(LA(NUMBER_3)) LG(LA(LC(NUMBER_3)))  &ht LG(LA(NUMBER_4)) LG(LA(LC(NUMBER_4)))
+&kp LC(LG(F))  &kp LC(LA(ENTER))  &ht LA(LC(RIGHT)) LC(LA(LEFT))  &ht LC(LA(J)) LC(LA(U))  &ht LC(LA(K)) LC(LA(I))    &none                                   &kp LC(LEFT)           &kp LC(RIGHT)  &ht LG(LA(NUMBER_3)) LG(LA(LC(NUMBER_3)))  &ht LG(LA(NUMBER_4)) LG(LA(LC(NUMBER_4)))
                                                                   &tog 4                   &kp LEFT_SHIFT             &kp LEFT_GUI                            &kp LEFT_ALT
             >;
         };
