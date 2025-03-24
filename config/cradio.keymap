@@ -113,12 +113,6 @@
             key-positions = <30 31>;
             layers = <0 1 2>;
         };
-
-        tg5 {
-            bindings = <&tog 5>;
-            key-positions = <0 9>;
-            layers = <4>;
-        };
     };
 
     macros {
@@ -180,7 +174,7 @@
 
         Nav {
             bindings = <
-&none          &none              &kp LG(GRAVE)                   &kp LG(TAB)              &kp PAGE_UP                &ht LG(RIGHT_BRACKET) LG(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &kp UP         &none                                      &none
+&tog 5         &none              &kp LG(GRAVE)                   &kp LG(TAB)              &kp PAGE_UP                &ht LG(RIGHT_BRACKET) LG(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &kp UP         &none                                      &tog 5
 &kp LG(Z)      &kp LG(X)          &kp LG(C)                       &kp LG(V)                &kp PAGE_DOWN              &kp LC(TAB)                             &kp LEFT               &kp DOWN       &kp RIGHT                                  &none
 &kp LC(LG(F))  &kp LC(LA(ENTER))  &ht LA(LC(RIGHT)) LC(LA(LEFT))  &ht LC(LA(J)) LC(LA(U))  &ht LC(LA(K)) LC(LA(I))    &none                                   &kp LC(LEFT)           &kp LC(RIGHT)  &ht LG(LA(NUMBER_3)) LG(LA(LC(NUMBER_3)))  &ht LG(LA(NUMBER_4)) LG(LA(LC(NUMBER_4)))
                                                                   &tog 4                   &kp LEFT_SHIFT             &kp LEFT_GUI                            &kp LEFT_ALT
