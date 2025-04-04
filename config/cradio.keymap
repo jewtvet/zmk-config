@@ -8,7 +8,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors/ruen.dtsi>
 
 #define MAC 0
 #define WIN 1
@@ -71,6 +70,18 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        toggle_lang: toggle_lang {
+            compatible = "zmk,behavior-toggle-lang";
+            #binding-cells = <0>;
+            label = "TOGGLE_LANG";
+        };
+        
+        conditional_key: conditional_key {
+            compatible = "zmk,behavior-conditional-key";
+            #binding-cells = <0>;
+            label = "CONDITIONAL_KEY";
         };
 
         mmv {
