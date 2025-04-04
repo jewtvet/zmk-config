@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: jewtvet
+      url-base: https://github.com/jewtvet
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -13,5 +15,8 @@ manifest:
       url: https://github.com/sky-bro/zmk
       revision: k4i-sweep-kbd
       import: app/west.yml
+    - name: zmk-ruen
+      remote: jewtvet
+      revision: main
   self:
     path: config

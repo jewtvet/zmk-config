@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/ruen.dtsi>
 
 #define MAC 0
 #define WIN 1
@@ -165,9 +166,9 @@
 
         Sym {
             bindings = <
-&kp LG(N8)  &kp LS(RIGHT_BRACKET)  &ht LS(PERIOD) LS(COMMA)  &kp LS(LEFT_BRACKET)  &kp BACKSLASH       &kp ENTER         &kp LS(N9)         &kp EQUAL               &kp LS(N0)      &kp LS(MINUS)
-&kp LS(N7)  &kp LS(NUMBER_1)       &kp LS(SEMICOLON)         &kp LS(SQT)           &kp SQT             &kp LS(NUMBER_2)  &sm LEFT_GUI       &sm LEFT_ALT            &sm LEFT_SHIFT  &sm LCTRL
-&none       &kp RIGHT_BRACKET      &kp SEMICOLON             &kp LEFT_BRACKET      &kp LS(NUMBER_3)    &kp LS(NUMBER_6)  &ht LS(N7) PERIOD  &ht LS(NUMBER_6) COMMA  &none           &kp LS(SLASH)
+&kp LG(N8)    &kp LS(RIGHT_BRACKET)  &ht LS(PERIOD) LS(COMMA)  &kp LS(LEFT_BRACKET)  &kp BACKSLASH       &kp ENTER         &kp LS(N9)         &kp EQUAL               &kp LS(N0)        &kp LS(MINUS)
+&kp LS(N7)    &kp LS(NUMBER_1)       &kp LS(SEMICOLON)         &kp LS(SQT)           &kp SQT             &kp LS(NUMBER_2)  &sm LEFT_GUI       &sm LEFT_ALT            &sm LEFT_SHIFT    &sm LCTRL
+&toggle_lang  &kp RIGHT_BRACKET      &kp SEMICOLON             &kp LEFT_BRACKET      &kp LS(NUMBER_3)    &kp LS(NUMBER_6)  &ht LS(N7) PERIOD  &ht LS(NUMBER_6) COMMA  &conditional_key  &kp LS(SLASH)
                                                              &kp DEL               &kp LEFT_SHIFT      &kp SPACE         &trans
             >;
         };
